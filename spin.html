@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Spin Animation</title>
+<style>
+    .spin {
+        animation: spin 2s linear infinite;
+        display: inline-block;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+
+<h2>CSS Spin Animation</h2>
+
+<div class="spin">
+    Spin me!
+</div>
+
+</body>
+</html>

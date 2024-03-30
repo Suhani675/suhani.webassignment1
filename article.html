@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastering CSS Animations: Bringing Your Web Designs to Life</title>
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+  <div class="container">
+
+  <header>
+    <h1>Mastering CSS Animations: Bringing Your Web Designs to Life</h1>
+  </header>
+
+  <article>
+    <section>
+      <h2>Understanding CSS Animations</h2>
+      <p>CSS animations allow you to animate HTML elements seamlessly by specifying keyframes of the animation's progression. To use CSS animation, you must first specify some keyframes for the animation.
+
+        Keyframes hold what styles the element will have at certain times.</p>
+      
+    </section>
+    <section>
+        <h2>What is a Keyframe?</h2>
+        <p>Keyframes gives you more control over the animation you want to perform. The animation is created by gradually changing from one style to another. You can change the CSS styles as many times as you want.</p>
+    </section>
+
+    <section>
+      <h2>Creating Common Animation Effects</h2>
+      <h3>Fade In/Fade Out</h3>
+      <p>In CSS, "fade in" and "fade out" refer to visual effects where an element gradually appears (fades in) or disappears (fades out) on the screen, rather than abruptly appearing or disappearing. These effects are often used to create smoother transitions between different states of an element or to draw attention to certain parts of a webpage in a more subtle way.Here's a code snippet for it:</p>
+      <pre><code>@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.element {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}</code></pre><a href="fadeIn.html"><b>TRY YOURSELF</b></a>
+      <h3>Slide In</h3>
+      <p>In CSS, "slide in" and "slide out" refer to visual effects where an element moves into view (slides in) or moves out of view (slides out) on the screen, rather than appearing or disappearing instantly. These effects are often used to create dynamic transitions between different parts of a webpage or to animate the appearance and disappearance of elements in a more engaging way. Here's a code snippet for it: </p>
+      <pre><code>@keyframes slideIn {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(0); }
+      }
+      
+      .element {
+        animation-name: slideIn;
+        animation-duration: 1s;
+      }
+      </code></pre><a href="slidein.html"><b>TRY YOURSELF</b></a>
+      <h3>Spin</h3>
+      <p>The spin animation is designed to make an element rotate continuously.  Here's a code snippet for it: </p>
+      <pre><code>.spin {
+        animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    </code></pre><a href="spin.html"><b>TRY YOURSELF</b></a>
+    <h3>Color Change Animation:</h3>
+    <p>The color change animation gradually transitions the background color of an element from one color to another. Here's a code snippet for it:  </p>
+    <pre><code>.color-change {
+      animation: changeColor 2s infinite alternate;
+  }
+  
+  @keyframes changeColor {
+      from { background-color: red; }
+      to { background-color: blue; }
+  }</code></pre><a href="changecolor.html"><b>TRY YOURSELF</b></a>
+  <p>There are many more animations that can be applied via css of you want to learn about all about them <a href="http://https://www.w3schools.com/css/css3_animations.asp">CLICK HERE</a></p>
+    </section>
+
+    <section>
+      <h2>Best Practices for CSS Animations</h2>
+      <ol>
+        <li>Performance</li>
+        <li>Accessibility</li>
+        <li>Progressive Enhancement</li>
+        <li>Testing</li>
+        <li>Subtlety</li>
+      </ol>
+      
+    </section>
+    <section><h2>Real world applications on CSS animations:</h2>
+     
+      <style>
+          table {
+              width: 100%;
+              border-collapse: collapse;
+          }
+          th, td {
+              border: 1px solid #ddd;
+              padding: 8px;
+              text-align: left;
+          }
+          th {
+              background-color: #f2f2f2;
+          }
+      </style>
+  </head>
+  <body>
+  
+  
+  
+  <table>
+      <tr>
+          <th>Industry/Application</th>
+          <th>Example</th>
+      </tr>
+      <tr>
+          <td>Website Design</td>
+          <td>Creating engaging and interactive user interfaces.</td>
+      </tr>
+      <tr>
+          <td>E-commerce</td>
+          <td>Enhancing product listings and improving user experience.</td>
+      </tr>
+      <tr>
+          <td>Presentations</td>
+          <td>Making online presentations and slideshows more dynamic.</td>
+      </tr>
+      <tr>
+          <td>Advertising</td>
+          <td>Designing eye-catching banners and advertisements.</td>
+      </tr>
+      <tr>
+          <td>Gaming</td>
+          <td>Developing simple browser-based games and interactive experiences.</td>
+      </tr>
+      <tr>
+          <td>Education</td>
+          <td>Creating educational content and online courses.</td>
+      </tr>
+      <tr>
+          <td>User Feedback</td>
+          <td>Providing visual feedback to users during interactions.</td>
+      </tr>
+      <tr>
+          <td>Loading Animations</td>
+          <td>Displaying visual feedback during content loading.</td>
+      </tr>
+      <tr>
+          <td>Mobile Applications</td>
+          <td>Enhancing mobile app interfaces and interactions.</td>
+      </tr>
+  </table></section>
+    <section><!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Animation Properties</title>
+      <style>
+          table {
+              width: 100%;
+              border-collapse: collapse;
+          }
+          th, td {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+          }
+          th {
+              background-color: #f2f2f2;
+          }
+      </style>
+      </head>
+      <body>
+      
+      <h2>CSS Animation Properties</h2>
+      
+      <table>
+        <tr>
+          <th>Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>@keyframes</td>
+          <td>Specifies the animation code</td>
+        </tr>
+        <tr>
+          <td>animation</td>
+          <td>A shorthand property for setting all the animation properties</td>
+        </tr>
+        <tr>
+          <td>animation-delay</td>
+          <td>Specifies a delay for the start of an animation</td>
+        </tr>
+        <tr>
+          <td>animation-direction</td>
+          <td>Specifies whether an animation should be played forwards, backwards or in alternate cycles</td>
+        </tr>
+        <tr>
+          <td>animation-duration</td>
+          <td>Specifies how long time an animation should take to complete one cycle</td>
+        </tr>
+        <tr>
+          <td>animation-fill-mode</td>
+          <td>Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)</td>
+        </tr>
+        <tr>
+          <td>animation-iteration-count</td>
+          <td>Specifies the number of times an animation should be played</td>
+        </tr>
+        <tr>
+          <td>animation-name</td>
+          <td>Specifies the name of the @keyframes animation</td>
+        </tr>
+        <tr>
+          <td>animation-play-state</td>
+          <td>Specifies whether the animation is running or paused</td>
+        </tr>
+        <tr>
+          <td>animation-timing-function</td>
+          <td>Specifies the speed curve of the animation</td>
+        </tr>
+      </table>
+      
+      </body>
+      </html>
+      </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>CSS animations empower web designers to create captivating and interactive experiences for users. By mastering CSS animations and judiciously applying them to your designs, you can elevate your web projects to new heights, delighting users and setting your work apart from the ordinary.</p>
+      
+    </section>
+  </article>
+</div>
+  
+</body>
+</html>

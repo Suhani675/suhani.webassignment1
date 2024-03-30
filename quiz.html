@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Animation Quiz</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Animation Quiz</title>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("quizForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+    
+        var answers = {
+          "q1": "c", // Correct answer for Question 1
+          "q2": "b",
+          "q3": "c",
+          "q4": "a",
+          "q5": "c",
+          "q6": "b",
+          "q7": "a",
+          "q8": "b",
+          "q9": "b",
+          "q10": "a", // Correct answer for Question 2
+          // Add more correct answers for other questions here
+        };
+        var score = 0;
+        var incorrectAnswers = {};
+    
+        // Collect user's answers and calculate score
+        var form = event.target;
+        var formData = new FormData(form);
+        formData.forEach(function(value, key) {
+          if (answers[key] === value) {
+            score++;
+          } else {
+            incorrectAnswers[key] = value;
+          }
+        });
+    
+        // Redirect to result page
+        var redirectUrl = "result.html?score=" + score;
+        if (Object.keys(incorrectAnswers).length > 0) {
+          redirectUrl += "&incorrect=" + Object.keys(incorrectAnswers).join(",");
+        }
+        window.location.href = redirectUrl;
+      });
+    });
+    </script>
+
+
+
+
+
+
+<style>
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #quizForm {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  ol {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+  }
+
+  input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  fieldset {
+    background-color: cornsilk; }
+</style>
+</head>
+<body>
+
+<h1>CSS Animation Quiz</h1>
+
+<form id="quizForm">
+  <fieldset>
+    <legend>Question 1:</legend>
+    <ol>
+      <li>
+        <h3>CSS animations help you to ?</h3>
+        <label>
+          <input type="radio" name="q1" value="a"> A. Add interactivity to web pages
+        </label><br>
+        <label>
+          <input type="radio" name="q1" value="b"> B. Style HTML elements
+        </label><br>
+        <label>
+          <input type="radio" name="q1" value="c"> C. Create dynamic transitions and effects
+        </label><br>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset>
+    <legend>Question 2:</legend>
+    <ol>
+      <li>
+        <h3>Which CSS property is used to define keyframes for animations?</h3>
+        <label>
+          <input type="radio" name="q2" value="a"> A. animation-duration
+        </label><br>
+        <label>
+          <input type="radio" name="q2" value="b"> B. animation-name
+        </label><br>
+        <label>
+          <input type="radio" name="q2" value="c"> C. animation-delay
+        </label><br>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset>
+    <legend>Question 3:</legend>
+    <ol>
+      <li>
+        <h3>What does the @keyframes rule define?</h3>
+        <label>
+          <input type="radio" name="q3" value="a"> A. Media queries
+        </label><br>
+        <label>
+          <input type="radio" name="q3" value="b"> B. animation-duration
+        </label><br>
+        <label>
+          <input type="radio" name="q3" value="c"> C. animation-keyframes
+        </label><br>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset>
+    <legend>Question 4:</legend>
+    <ol>
+      <li>
+        <h3>Which CSS property is used to specify duration of an animation?</h3>
+        <label>
+          <input type="radio" name="q4" value="a"> A. animation-duration
+        </label><br>
+        <label>
+          <input type="radio" name="q4" value="b"> B. animation-timing-function
+        </label><br>
+        <label>
+          <input type="radio" name="q4" value="c"> C. animation-delay
+        </label><br>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset>
+    <legend>Question 5:</legend>
+    <ol>
+      <li>
+        <h3>What does the animation-timing-function property control?</h3>
+        <label>
+          <input type="radio" name="q5" value="a"> A. The duration of the animation
+        </label><br>
+        <label>
+          <input type="radio" name="q5" value="b"> B. The direction of the animation
+        </label><br>
+        <label>
+          <input type="radio" name="q5" value="c"> C. The speed curve of the animation
+        </label><br>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset>
+    <legend>Question 6:</legend>
+    <ol>
+      <li>
+        <h3>Which property specifies how many times an animation should be played?</h3>
+        <label>
+          <input type="radio" name="q6" value="a"> A. animation-play-state
+        </label><br>
+        <label>
+          <input type="radio" name="q6" value="b"> B. animation-iteration-count
+        </label><br>
+        <label>
+          <input type="radio" name="q6" value="c"> C. animation-fill-mode
+        </label><br>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset>
+    <legend>Question 7:</legend>
+    <ol>
+      <li>
+        <h3>What does the animation-fill-mode property specify?</h3>
+        <label>
+          <input type="radio" name="q7" value="a"> A. The style for the element when animation is not playing
+        </label><br>
+        <label>
+          <input type="radio" name="q7" value="b"> B. The direction of animation
+        </label><br>
+        <label>
+          <input type="radio" name="q7" value="c"> C. The speed curve of the animation
+        </label><br>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset>
+    <legend>Question 8:</legend>
+    <ol>
+      <li>
+        <h3>Which CSS property is used to pause and resume the animation?</h3>
+        <label>
+          <input type="radio" name="q8" value="a"> A. animation-delay
+        </label><br>
+        <label>
+          <input type="radio" name="q8" value="b"> B. animation-play-state
+        </label><br>
+        <label>
+          <input type="radio" name="q8" value="c"> C. animation-direction
+        </label><br>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset>
+    <legend>Question 9:</legend>
+    <ol>
+      <li>
+        <h3>What does the animation-direction property control?</h3>
+        <label>
+          <input type="radio" name="q9" value="a"> A. The duration of animation
+        </label><br>
+        <label>
+          <input type="radio" name="q9" value="b"> B. The direction of animation
+        </label><br>
+        <label>
+          <input type="radio" name="q9" value="c"> C. The speed curve of animation
+        </label><br>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset>
+    <legend>Question 10:</legend>
+    <ol>
+      <li>
+        <h3>Which CSS property allows to rotate an element continuously ?</h3>
+        <label>
+          <input type="radio" name="q10" value="a"> A. transform
+        </label><br>
+        <label>
+          <input type="radio" name="q10" value="b"> B. animation-rotate
+        </label><br>
+        <label>
+          <input type="radio" name="q10" value="c"> C. rotate
+        </label><br>
+      </li>
+    </ol>
+  </fieldset>
+
+  
+            
+    
+
+  <!-- Add more fieldsets for additional questions -->
+
+  <input type="submit" value="Submit Quiz">
+</form>
+
+
+
+    
+
+</body>
+</html>

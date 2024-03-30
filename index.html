@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        :root {
+            --mainclr: #239f85;
+            --secclr:  #c0c0c0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            transition: 0.5s;
+            text-transform: capitalize;
+            text-decoration: none;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .header {
+            padding: 20px;
+            background-color: var(--mainclr);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .header #logo {
+            width: 50px;
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 1.5rem;
+            margin-left: 2rem;
+            position: relative;
+        }
+
+        .navbar a:after {
+            content: '';
+            background: var(--secclr);
+            height: 3px;
+            width: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 5px;
+            transition: 0.4s;
+        }
+
+        .navbar a:hover:after {
+            content: '';
+            background: var(--secclr);
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 5px;
+        }
+
+        .icons div {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: white;
+            display: none;
+        }
+
+        .icons a {
+            color: white;
+            background: var(--secclr);
+            padding: 1.5rem 3rem;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 100px 20px 20px; /* Adjust the top padding to accommodate the fixed header */
+        }
+
+        .section {
+            margin-bottom: 50px; /* Add space between sections */
+            padding: 20px; /* Add padding to sections */
+            background-color:#faf3e0; /* Add background color to sections */
+            border-radius: 8px; /* Add border radius to sections */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add box shadow to sections */
+            font-family: Arial, sans-serif; /* Add font family for all sections */
+        }
+
+        .section h2 {
+            margin-bottom: 20px; /* Add margin to section headings */
+            font-size: 2rem; /* Adjust font size of section headings */
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        body {
+            font-size: 16px;
+            font-family: Arial, sans-serif; /* Add a fallback font family */
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <h1><b>ASSIGNMENT 1</b></h1>
+
+    <nav class="navbar">
+        <a href="partA.html" target="_self">About</a>
+        <a href="article.html" target="_self">Article</a>
+        <a href="quiz.html" target="_self">Quiz</a>
+
+       
+       
+    </nav>
+    <div class="icons">
+        <div id="menubar" class="fas fa-bars"></div>
+        <a href="contact.html">CONTACT</a>
+    </div>
+</header>
+<main>
+    <section class="section">
+        <h2>About Me</h2>
+        <p>Hi there! My name is Suhani Gupta.</p>
+        <p>From Amabala, Haryana</p>
+        <p>Currently I am pursuing BTECH CSE from UPES Dehradun with CCVT as my specialisation.</p>
+        <p>To know about my skills, interests, goals, education <a href="partA.html">Click here</a></p>
+    </section>
+    
+    <section class="section">
+        <h2>Article Summary</h2>
+        <p>In my recent article on CSS animations, I discussed what are css animations and how they bring web pages to life. I highlighted key strategies for using css animations which are going to make these animations as they make web page attractive.</p>
+        
+        <p>To learn more about CSS animations and its real-world applications, check out my article <a href="article.html">Click here</a>.</p>
+    </section>
+    
+    <section class="section">
+        <h2>Quiz Preview</h2>
+        <p>Now that you saw the article about CSS animations, Are you ready to test your knowledge for it? </p>
+        <p>Get started now and see how well you learnt about CSS animations <a href="quiz.html">Take the Quiz</a></p>
+    </section>
+    
+</main>
+
+    
+</body>
+</html>

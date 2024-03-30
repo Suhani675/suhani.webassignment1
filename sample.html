@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Flip on Hover</title>
+<style>
+  /* Define initial state */
+  .flip-container {
+    perspective: 1000px; /* Add perspective for 3D effect */
+  }
+
+  .flip-container:hover .flip-image {
+    transform: scaleX(-1); /* Flip horizontally */
+    /* transform: scaleY(-1); */ /* Uncomment this line to flip vertically */
+  }
+
+  /* Optional: Add transition for smoother effect */
+  .flip-image {
+    transition: transform 0.5s;
+  }
+</style>
+</head>
+<body>
+
+<!-- Container for flipping -->
+<div class="flip-container">
+  <!-- Image to flip -->
+  <img src="upeis.jpg" alt="Your Image" class="flip-image">
+</div>
+
+</body>
+</html>
+header {
+  background-color: #e0e8f0;
+  color: #333;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed; 
+  top: 0;
+}

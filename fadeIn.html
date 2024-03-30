@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Fade-In Animation</title>
+<style>
+    .fade-in {
+        animation: fadeIn 1s forwards;
+        opacity: 0;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+</head>
+<body>
+
+<h2>CSS Fade-In Animation</h2>
+
+<div class="fade-in">
+    This content fades in.
+</div>
+
+</body>
+</html>

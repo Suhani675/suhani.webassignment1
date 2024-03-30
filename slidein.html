@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Slide-In Animation</title>
+<style>
+    .slide-in {
+        animation: slideIn 1s forwards;
+        opacity: 0;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+</style>
+</head>
+<body>
+
+<h2>CSS Slide-In Animation</h2>
+
+<div class="slide-in">
+    This content will slide in.
+</div>
+
+</body>
+</html>
